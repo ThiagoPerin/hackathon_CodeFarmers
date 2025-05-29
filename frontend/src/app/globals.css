@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --color-green-dark: var(--green-dark);
+  --color-green-mid: var(--green-mid);
+  --color-green-light: var(--green-light);
+  --color-yellow-olive: var(--yellow-olive);
+  --color-gray-light: var(--gray-light);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-roboto);
@@ -44,6 +49,11 @@
 }
 
 :root {
+  --green-dark: #365902;
+  --green-mid: #8AA624;
+  --green-light: #CED9A7;
+  --yellow-olive: #BFB636;
+  --gray-light: #F2F2F2;
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
@@ -116,6 +126,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
