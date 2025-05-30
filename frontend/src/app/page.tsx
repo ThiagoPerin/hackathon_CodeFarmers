@@ -1,5 +1,6 @@
 "use client"
 import { useRef } from "react";
+import { useRouter } from "next/navigation"
 import Image from "next/image";
 import { Button } from "@/components/ui/button"
 import { ChevronsDown } from 'lucide-react';
@@ -7,6 +8,7 @@ import WavyPatternBackground from "@/components/custom/backgrounds/WavyPatternBa
 import CornerPatternBackgorund from "@/components/custom/backgrounds/CornerPatternBackgorund";
 
 export default function Home() {
+  const router = useRouter()
 
   const secondSectionRef = useRef<HTMLDivElement>(null);
   const scrollToSecondSection = () => {
@@ -40,7 +42,7 @@ export default function Home() {
             É mais produtividade com diversificação de renda e menor impacto ambiental.
           </p>
           <p className="sm:text-5xl text-4xl">Comece agora mesmo!</p>
-          <Button className="w-fit p-8 text-md" variant="homeBtn">Entrar com o Google</Button>
+          <Button className="w-fit p-8 text-md" variant="homeBtn" onClick={() => router.push("/dashboard")}>Entrar com o Google</Button>
         </div>
       </div>
 
