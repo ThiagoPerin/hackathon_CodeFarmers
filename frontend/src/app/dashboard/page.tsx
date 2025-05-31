@@ -1,9 +1,12 @@
+"use client"
+import { useRouter } from "next/navigation"
 import CustomMenuButton from '@/components/custom/buttons/CustomMenuButton';
 import RoundImageButton from '@/components/custom/buttons/RoundImageButton';
 import { MapPin, Upload, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Dashboard() {
+  const router = useRouter()
 
   return (
     <div className="w-[calc(100vw-60px)] h-[calc(100vh-70px)] flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
@@ -43,7 +46,7 @@ export default function Dashboard() {
           <RoundImageButton label="Meu projeto 4">
             <Image src="/map_image4.webp" alt="Logo" fill={true}></Image>
           </RoundImageButton>
-          <RoundImageButton label="Ver todos os projetos">
+          <RoundImageButton label="Ver todos os projetos" onClick={() => router.push("/dashboard/projects")}>
             <ArrowRight size={50} />
           </RoundImageButton>
         </div>
