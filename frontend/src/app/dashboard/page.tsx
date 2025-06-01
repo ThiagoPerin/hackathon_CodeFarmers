@@ -19,7 +19,7 @@ export default function Dashboard() {
           <CustomMenuButton label="Selecionar área no mapa" onClick={() => router.push("/dashboard/map-selection")}>
             <MapPin size={50} />
           </CustomMenuButton>
-          <CustomMenuButton label="Enviar arquivo" onClick={() => router.push("/dashboard/upload")}>
+          <CustomMenuButton label="Enviar arquivo" onClick={() => router.push("/dashboard/upload-file")}>
             <Upload size={50} />
           </CustomMenuButton>
         </div>
