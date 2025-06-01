@@ -9,7 +9,7 @@ export default function Navbar() {
     const { title, showBackButton } = usePageTitle();
     return (
         <div className="w-full h-[70px] px-4 flex items-center justify-between bg-green-mid">
-            <h1 className="text-3xl text-white font-light flex items-center gap-2">
+            <h1 className="sm:text-3xl text-xl text-white font-light flex items-center gap-2">
                 {showBackButton && (
                     <button onClick={() => router.back()} className="text-white cursor-pointer">
                         <ArrowLeft size={30} />
