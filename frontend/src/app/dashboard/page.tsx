@@ -9,7 +9,7 @@ export default function Dashboard() {
   const router = useRouter()
 
   return (
-    <div className="w-[calc(100vw-60px)] h-[calc(100vh-70px)] flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
+    <div className="w-[calc(100vw-60px)] h-full flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
 
       <div className="w-fit h-fit text-4xl font-bold text-green-dark">Bem vindo, Usuário!</div>
 

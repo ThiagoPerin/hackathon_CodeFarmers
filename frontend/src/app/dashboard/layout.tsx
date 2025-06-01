@@ -11,7 +11,7 @@ export default function RootLayout({
     <PageTitleProvider>
       <div className="h-screen w-screen flex flex-col items-center justify-start">
         <Navbar />
-        <div className="h-full w-full flex items-start justify-start">
+        <div className="h-[calc(100vh-70px)] w-full flex items-start justify-start">
           <Sidebar />
           {children}
         </div>
