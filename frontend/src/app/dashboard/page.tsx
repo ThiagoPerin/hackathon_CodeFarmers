@@ -9,25 +9,19 @@ export default function Dashboard() {
   const router = useRouter()
 
   return (
-    <div className="w-[calc(100vw-60px)] h-[calc(100vh-70px)] flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
+    <div className="w-[calc(100vw-60px)] h-full flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
 
       <div className="w-fit h-fit text-4xl font-bold text-green-dark">Bem vindo, Usuário!</div>
 
       <div className="w-fit h-fit flex flex-col sm:items-start items-center justify-start gap-2">
         <div className="text-xl">Novo Projeto</div>
         <div className="h-fit w-fit flex sm:justify-start justify-center gap-4 flex-wrap">
-          <div className="w-[130px] flex flex-col">
-            <CustomMenuButton>
-              <MapPin size={50} />
-            </CustomMenuButton>
-            <div className="text-sm text-center">Selecionar área no mapa</div>
-          </div>
-          <div className="w-[130px] flex flex-col">
-            <CustomMenuButton>
-              <Upload size={50} />
-            </CustomMenuButton>
-            <div className="text-sm text-center">Enviar arquivo</div>
-          </div>
+          <CustomMenuButton label="Selecionar área no mapa" onClick={() => router.push("/dashboard/map-selection")}>
+            <MapPin size={50} />
+          </CustomMenuButton>
+          <CustomMenuButton label="Enviar arquivo" onClick={() => router.push("/dashboard/upload-file")}>
+            <Upload size={50} />
+          </CustomMenuButton>
         </div>
       </div>
 

@@ -41,7 +41,7 @@ export default function Projects() {
     ]
 
     return (
-        <div className="w-[calc(100vw-60px)] h-[calc(100vh-70px)] overflow-auto flex flex-col items-start justify-start p-6">
+        <div className="w-[calc(100vw-60px)] h-full overflow-auto flex flex-col items-start justify-start p-6">
             {mockProjectsData.map((item, index) => (
                 <ProjectCards item={item} key={index} />
             ))}
