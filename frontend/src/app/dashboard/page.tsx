@@ -16,18 +16,12 @@ export default function Dashboard() {
       <div className="w-fit h-fit flex flex-col sm:items-start items-center justify-start gap-2">
         <div className="text-xl">Novo Projeto</div>
         <div className="h-fit w-fit flex sm:justify-start justify-center gap-4 flex-wrap">
-          <div className="w-[130px] flex flex-col">
-            <CustomMenuButton>
-              <MapPin size={50} />
-            </CustomMenuButton>
-            <div className="text-sm text-center">Selecionar área no mapa</div>
-          </div>
-          <div className="w-[130px] flex flex-col">
-            <CustomMenuButton>
-              <Upload size={50} />
-            </CustomMenuButton>
-            <div className="text-sm text-center">Enviar arquivo</div>
-          </div>
+          <CustomMenuButton label="Selecionar área no mapa" onClick={() => router.push("/dashboard/map-selection")}>
+            <MapPin size={50} />
+          </CustomMenuButton>
+          <CustomMenuButton label="Enviar arquivo" onClick={() => router.push("/dashboard/upload")}>
+            <Upload size={50} />
+          </CustomMenuButton>
         </div>
       </div>
 
