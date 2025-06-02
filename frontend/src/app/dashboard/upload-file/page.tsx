@@ -4,8 +4,10 @@ import { useEffect, useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Check, Upload } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function UploadFile() {
+    const router = useRouter()
     const { setTitle, setShowBackButton } = usePageTitle();
     const fileInputRef = useRef<HTMLInputElement | null>(null);
     const [isFileLoaded, setIsFileLoaded] = useState(false);
@@ -58,7 +60,7 @@ export default function UploadFile() {
                     )}
                 </CardContent>
             </Card>
-            <Button className="w-[120px]" variant="greenBtn" {...{ disabled: !isFileLoaded }}><Check /> Analisar</Button>
+            <Button className="w-[120px]" variant="greenBtn" onClick={() => router.push("/dashboard/report")} {...{ disabled: !isFileLoaded }}><Check /> Analisar</Button>
         </div>
     );
 }

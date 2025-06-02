@@ -5,8 +5,10 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Check } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function MapSelection() {
+    const router = useRouter()
     const { setTitle, setShowBackButton } = usePageTitle();
     const [latitude, setLatitude] = useState("-19.6167");
     const [longitude, setLongitude] = useState("-57.516");
@@ -35,7 +37,7 @@ export default function MapSelection() {
                     <Label htmlFor="longitude">Longitude</Label>
                     <Input type="text" id="longitude" placeholder="Longitude" value={longitude} onInput={(e) => setLongitude(e.currentTarget.value)} />
                 </div>
-                <Button className="w-[120px]" variant="greenBtn"><Check /> Analisar</Button>
+                <Button className="w-[120px]" variant="greenBtn" onClick={() => router.push(`/dashboard/report`)}><Check /> Analisar</Button>
             </div>
             <div className="w-full h-full rounded overflow-hidden">
                 <iframe key={iframeSrc} src={iframeSrc}

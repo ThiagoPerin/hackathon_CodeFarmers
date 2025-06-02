@@ -1,9 +1,11 @@
 "use client"
 import ProjectCards from "@/components/custom/cards/ProjectCards";
 import { usePageTitle } from "@/context/PageTitleContext";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 export default function Projects() {
+    const router = useRouter()
     const { setTitle, setShowBackButton } = usePageTitle();
 
     useEffect(() => {
@@ -43,7 +45,7 @@ export default function Projects() {
     return (
         <div className="w-[calc(100vw-60px)] h-full overflow-auto flex flex-col items-start justify-start p-6">
             {mockProjectsData.map((item, index) => (
-                <ProjectCards item={item} key={index} />
+                <ProjectCards item={item} key={index} onClick={() => router.push("/dashboard/report")}/>
             ))}
         </div>
     );
