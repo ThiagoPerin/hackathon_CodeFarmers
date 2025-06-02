@@ -22,7 +22,7 @@ export default function ReportAccordion() {
                     <p>
                         A produtividade do arroz nesse sistema é 3 vezes maior que no sequeiro, mas o custo de implantação é maior. A implantação da lavoura depende de um
                         sistema de irrigação por inundação. Além disso, precisa de uma oferta abundante de água durante o desenvolvimento até próximo da colheita.
-                        Outras opções: soja
+                        Outras opções: soja.
                     </p>
                 </AccordionContent>
             </AccordionItem>
