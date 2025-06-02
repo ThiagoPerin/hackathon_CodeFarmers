@@ -54,7 +54,7 @@ export default function UploadFile() {
                             <div className="w-[130px] aspect-square relative flex items-center justify-center bg-green-light text-green-dark rounded-full overflow-hidden">
                                 <Check size={50} />
                             </div>
-                            <p color="text-md font-bold">{selectedFile}</p>
+                            <p className="text-md font-bold break-all">{selectedFile}</p>
                             <Button variant="destructive" onClick={handleFileRemoval}>Remover arquivo</Button>
                         </>
                     )}
