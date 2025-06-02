@@ -28,16 +28,16 @@ export default function Dashboard() {
       <div className="w-fit h-fit flex flex-col sm:items-start items-center justify-start gap-2">
         <div className="text-xl">Últimos projetos</div>
         <div className="h-fit w-fit flex sm:justify-start justify-center gap-4 flex-wrap">
-          <RoundImageButton label="Meu projeto 1">
+          <RoundImageButton label="Meu projeto 1" onClick={() => router.push("/dashboard/report")}>
             <Image src="/map_image1.webp" alt="Logo" fill={true}></Image>
           </RoundImageButton>
-          <RoundImageButton label="Meu projeto 2">
+          <RoundImageButton label="Meu projeto 2" onClick={() => router.push("/dashboard/report")}>
             <Image src="/map_image2.webp" alt="Logo" fill={true}></Image>
           </RoundImageButton>
-          <RoundImageButton label="Meu projeto 3">
+          <RoundImageButton label="Meu projeto 3" onClick={() => router.push("/dashboard/report")}>
             <Image src="/map_image3.webp" alt="Logo" fill={true}></Image>
           </RoundImageButton>
-          <RoundImageButton label="Meu projeto 4">
+          <RoundImageButton label="Meu projeto 4" onClick={() => router.push("/dashboard/report")}>
             <Image src="/map_image4.webp" alt="Logo" fill={true}></Image>
           </RoundImageButton>
           <RoundImageButton label="Ver todos os projetos" onClick={() => router.push("/dashboard/projects")}>

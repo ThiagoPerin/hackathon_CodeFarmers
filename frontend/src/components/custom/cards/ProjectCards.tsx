@@ -8,12 +8,13 @@ type ProjectCards = {
         image: string;
         date: string;
     }
+    onClick?: () => void,
 };
 
-export default function ProjectCards({ item }: ProjectCards) {
+export default function ProjectCards({ item, onClick }: ProjectCards) {
     return (
         <>
-            <div className="sm:h-[200px] h-fit w-full flex items-start sm:justify-start justify-center gap-2 py-2.5 text-center flex-wrap">
+            <div className="sm:h-[200px] h-fit w-full flex items-start sm:justify-start justify-center gap-2 py-2.5 text-center flex-wrap cursor-pointer hover:bg-gray-100" onClick={onClick}>
                 <div className="w-[180px] h-[180px] relative rounded-sm overflow-hidden">
                     <Image src={item.image} alt={item.name} fill={true} />
                 </div>
