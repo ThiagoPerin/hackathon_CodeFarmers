@@ -22,7 +22,7 @@ export default function UploadFile() {
     return (
         <div className="w-[calc(100vw-60px)] h-full overflow-auto flex flex-col items-start justify-start sm:py-6 sm:px-20 p-4 gap-6">
             <div className="h-[400px] min-h-[400px] w-full relative rounded overflow-hidden">
-                <Image src="/map_image1.webp" alt="Logo" fill={true}></Image>
+                <Image src="/map_image1_dashed_area.webp" alt="Logo" fill={true}></Image>
             </div>
             <div className="h-fit w-full gap-3">
                 <div className="grid h-fit sm:w-[300px] w-full gap-3">
