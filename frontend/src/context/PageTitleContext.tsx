@@ -12,7 +12,7 @@ type PageTitleContextType = {
 const PageTitleContext = createContext<PageTitleContextType | undefined>(undefined);
 
 export function PageTitleProvider({ children }: { children: ReactNode }) {
-    const [title, setTitle] = useState("NomeApp");
+    const [title, setTitle] = useState("ILPF Inteligente");
     const [showBackButton, setShowBackButton] = useState(false);
 
     return (
