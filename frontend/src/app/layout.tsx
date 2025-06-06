@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CodeFarmers",
-  description: "Hackathon Project by CodeFarmers",
+  title: "ILPF Inteligente",
+  description: "Hackathon Project by CodeFarmers.",
 };
 
 export default function RootLayout({
