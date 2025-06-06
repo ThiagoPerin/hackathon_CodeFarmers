@@ -4,9 +4,18 @@ import CustomMenuButton from '@/components/custom/buttons/CustomMenuButton';
 import RoundImageButton from '@/components/custom/buttons/RoundImageButton';
 import { MapPin, Upload, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useEffect } from "react";
+import { usePageTitle } from "@/context/PageTitleContext";
 
 export default function Dashboard() {
-  const router = useRouter()
+  const router = useRouter();
+  const { setTitle, setShowBackButton } = usePageTitle();
+
+  useEffect(() => {
+    setTitle("ILPF Inteligente");
+    setShowBackButton(false);
+    return () => setShowBackButton(false);
+  }, []);
 
   return (
     <div className="w-[calc(100vw-60px)] h-full flex flex-col sm:items-start items-center justify-start p-6 gap-8 overflow-auto">
